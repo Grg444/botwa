@@ -1,0 +1,32 @@
+/// CASE ADDPM2 ( API PM2 ) BY RAFATHAR OFFCIAL X CEKIL OFFCJAL
+
+case 'addip': case 'addpm2':
+if (!isOwner) return reply(`Ngapain ? Fitur Ini Khusus Tuan Saya😜`)
+if (args.length !== 1) {
+return reply('Format penggunaan salah. Contoh: !addpm2 <ip>');
+}
+const ipValue = args[0];
+const url = 'https://cekilhost.net/api/config';
+axios.post(url, `ip=${ipValue}`)
+.then(response => {
+if (response.data.status === 'success') {
+const successMessage = `Berhasil Mendaftar pm2 dengan IP: ${ipValue}`;
+reply(successMessage);
+} else {
+const errorMessage = 'Terjadi kesalahan: ' + response.data.message;
+reply(errorMessage);
+}
+})
+.catch(error => {
+console.error(error);
+reply('Terjadi kesalahan saat mengirim permintaan.');
+});
+break
+case 'getpm2':
+if (!isOwner) return reply(`Ngapain ? Fitur Ini Khusus Tuan Saya😜`)
+Biiofc.sendMessage(from, {document: fs.readFileSync('./freya/pm2.json'), caption: 'Egg Pm2', mimetype: 'application/json', fileName: 'pm2.json'}, {quoted: m})
+break
+case 'getbot':
+
+
+NOTE : JGN DI KASIH ATAU MENJATUHKAN HARGA OKEI. DAN DILARANG MENJUAL KE ANAK JB ! KETAHUAN DIJUAL KE ANAK JB SAYA DELETE API PM2 NYA!!
